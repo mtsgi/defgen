@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://mtsgi.github.io/kitstrap/d/kitstrap.css">
+    <link rel="stylesheet" href="https://mtsgi.github.io/kitstrap/d/kitstrap-font.css">
+    <title>kit defgen</title>
+    <script src="./defgen.js"></script>
+</head>
+<body>
+    <a class="kit-button kit-right black m-m" id="export">Export</a>
+    <kit-navbar-alt class="silver p-l">
+        define.json Generator
+    </kit-navbar-alt>
+    <div class="p m-l">
+        <h2>基本情報</h2>
+        <label class="kit-left">ID</label>
+        <input type="text" class="textbox" placeholder="id" id="id">
+        <br>
+        <label class="kit-left">名前</label>
+        <input type="text" class="textbox" placeholder="name" id="name">
+        <br>
+        <label class="kit-left">バージョン</label>
+        <input type="text" class="textbox" placeholder="version" id="version">
+        <br>
+        <label class="kit-left">作者名</label>
+        <input type="text" class="textbox" placeholder="author" id="author">
+
+        <h2>サポート</h2>
+        <div class="kit-toggle">
+                <input type="checkbox" id="darkmode" id="darkmode">
+                <label for="darkmode"></label>
+                <label for="darkmode">ダークモード</label>
+        </div>
+        <div class="kit-toggle">
+                <input type="checkbox" id="fullscreen" id="fullscreen">
+                <label for="fullscreen"></label>
+                <label for="fullscreen">全画面表示</label>
+        </div>
+        <div class="kit-toggle">
+                <input type="checkbox" id="resize" id="resize">
+                <label for="resize"></label>
+                <label for="resize">リサイズ</label>
+        </div>
+
+        <h2>ウィンドウ</h2>
+        <label class="kit-left">アイコン画像</label>
+        <input type="text" class="textbox" placeholder="icon" id="icon">
+        <div class="kit-sub">・define.jsonと同一のパス／<code>none</code>でアイコン画像なし</div>
+        <label class="kit-left">幅</label>
+        <input type="text" class="textbox" placeholder="size.width" id="width">
+        <br>
+        <label class="kit-left">高さ</label>
+        <input type="text" class="textbox" placeholder="size.height" id="height">
+        <div class="kit-sub">・デフォルトは<code>auto</code></div>
+
+        <h2>アプリ情報</h2>
+        <label class="kit-left">ビュー</label>
+        <input type="text" class="textbox" placeholder="view" id="view">
+        <br>
+        <label class="kit-left">スクリプト</label>
+        <input type="text" class="textbox" placeholder="script" id="script">
+        <div class="kit-sub">・<code>none</code>でスクリプトなし</div>
+        <br>
+        <label class="kit-left">CSS</label>
+        <input type="text" class="textbox" placeholder="css" id="css">
+        <div class="kit-sub">・<code>none</code>でCSSなし</div>
+    </div>
+</body>
+</html>
