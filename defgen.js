@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "support": {
             "darkmode": false,
             "resize": false,
-            "fullscreen": false
+            "fullscreen": false,
+            "multiple": false
         },
     
         "size": {
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         DEFINE.support.darkmode = document.getElementById("darkmode").checked;
         DEFINE.support.resize = document.getElementById("resize").checked;
         DEFINE.support.fullscreen = document.getElementById("fullscreen").checked;
+        DEFINE.support.multiple = document.getElementById("multiple").checked;
 
         DEFINE.size.width = document.getElementById("width").value;
         DEFINE.size.height = document.getElementById("height").value;
@@ -43,4 +45,3 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("export").download = "define.json";
     })
 });
-  
