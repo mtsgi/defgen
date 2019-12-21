@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let DEFINE = {
+    const DEFINE = {
         "id": "",
         "name": "",
         "icon": "",
@@ -22,26 +22,26 @@ document.addEventListener("DOMContentLoaded", () => {
         "script": "",
         "css": ""
     }
-    document.getElementById("export").addEventListener("click", () => {
-        DEFINE.id = document.getElementById("id").value;
-        DEFINE.name = document.getElementById("name").value;
-        DEFINE.icon = document.getElementById("icon").value;
-        DEFINE.version = document.getElementById("version").value;
-        DEFINE.author = document.getElementById("author").value;
-        DEFINE.view = document.getElementById("view").value;
-        DEFINE.script = document.getElementById("script").value;
-        DEFINE.css = document.getElementById("css").value;
+    document.querySelector('#export').addEventListener("click", () => {
+        DEFINE.id = document.querySelector('#id').value;
+        DEFINE.name = document.querySelector('#name').value;
+        DEFINE.icon = document.querySelector('#icon').value;
+        DEFINE.version = document.querySelector('#version').value;
+        DEFINE.author = document.querySelector('#author').value;
+        DEFINE.view = document.querySelector('#view').value;
+        DEFINE.script = document.querySelector('#script').value;
+        DEFINE.css = document.querySelector('#css').value;
 
-        DEFINE.support.darkmode = document.getElementById("darkmode").checked;
-        DEFINE.support.resize = document.getElementById("resize").checked;
-        DEFINE.support.fullscreen = document.getElementById("fullscreen").checked;
-        DEFINE.support.multiple = document.getElementById("multiple").checked;
+        DEFINE.support.darkmode = document.querySelector('#darkmode').checked;
+        DEFINE.support.resize = document.querySelector('#resize').checked;
+        DEFINE.support.fullscreen = document.querySelector('#fullscreen').checked;
+        DEFINE.support.multiple = document.querySelector('#multiple').checked;
 
-        DEFINE.size.width = document.getElementById("width").value;
-        DEFINE.size.height = document.getElementById("height").value;
+        DEFINE.size.width = document.querySelector('#width').value || 'auto';
+        DEFINE.size.height = document.querySelector('#height').value || 'auto';
 
         var blob = new Blob([ JSON.stringify(DEFINE, null, 4) ], { type: "application/json" });
-        document.getElementById("export").href = URL.createObjectURL(blob);
-        document.getElementById("export").download = "define.json";
+        document.querySelector('#export').href = URL.createObjectURL(blob);
+        document.querySelector('#export').download = "define.json";
     })
 });
