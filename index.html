@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://mtsgi.github.io/kitstrap/d/kitstrap.css">
     <link rel="stylesheet" href="https://mtsgi.github.io/kitstrap/d/kitstrap-font.css">
-    <title>kit defgen</title>
+    <title>defgen for kit</title>
     <script src="./defgen.js"></script>
+    <link rel="icon" type="image/x-icon" href="./icon.png">
 </head>
+
 <body>
-    <a class="kit-button kit-right black m-m" id="export">Export</a>
-    <kit-navbar-alt class="silver p-l">
-        define.json Generator
-    </kit-navbar-alt>
-    <div class="p m-l">
+    <header class="p-t-l p-l-l">
+        <img src="./logo.png" alt="define.json Generator" style="height: 50px;">
+        <a class="kit-button-alt kit-right black m-r" id="export">Export</a>
+    </header>
+    <main class="m-l-l m-r-l">
         <h2>基本情報</h2>
-        <label class="kit-left">ID</label>
-        <input type="text" class="textbox" placeholder="id" id="id">
-        <br>
-        <label class="kit-left">名前</label>
-        <input type="text" class="textbox" placeholder="name" id="name">
-        <br>
-        <label class="kit-left">バージョン</label>
-        <input type="text" class="textbox" placeholder="version" id="version">
-        <br>
-        <label class="kit-left">作者名</label>
-        <input type="text" class="textbox" placeholder="author" id="author">
+
+        <div class="kit-flex m-t-l kit-flex-middle">
+            <label class="kit-width-25">ID</label>
+            <input type="text" class="textbox kit-width-75" placeholder="id" id="id">
+        </div>
+        <div class="kit-flex m-t-l kit-flex-middle">
+            <label class="kit-width-25">名前</label>
+            <input type="text" class="textbox kit-width-75" placeholder="name" id="name">
+        </div>
+        <div class="kit-flex m-t-l kit-flex-middle">
+            <label class="kit-width-25">バージョン</label>
+            <input type="text" class="textbox kit-width-75" placeholder="version" id="version">
+        </div>
+        <div class="kit-flex m-t-l kit-flex-middle">
+            <label class="kit-width-25">作者名</label>
+            <input type="text" class="textbox kit-width-75" placeholder="author" id="author">
+        </div>
 
         <h2>サポート</h2>
+
         <label class="kit-toggle p-l">
             <input type="checkbox" id="darkmode">ダークモード<label for="darkmode"></label>
         </label>
@@ -42,38 +52,52 @@
             <input type="checkbox" id="multiple" checked>多重起動<label for="multiple"></label>
         </label>
 
-        <!--
-        <h2>バージョン</h2>
-        <label class="kit-left">only-support</label>
-        <input type="text" class="textbox">
-        <br>
-        <label class="kit-left">not-support</label>
-        <input type="text" class="textbox">
-        <div class="kit-sub">・2つのプロパティの併用は不可</div>
-        -->
-
         <h2>ウィンドウ</h2>
-        <label class="kit-left">アイコン画像</label>
-        <input type="text" class="textbox" placeholder="icon" id="icon">
-        <div class="kit-sub">・define.jsonと同一のパス／<code>none</code>でアイコン画像なし</div>
-        <label class="kit-left">幅</label>
-        <input type="text" class="textbox" placeholder="size.width" id="width">
-        <br>
-        <label class="kit-left">高さ</label>
-        <input type="text" class="textbox" placeholder="size.height" id="height">
-        <div class="kit-sub">・デフォルトは<code>auto</code></div>
+
+        <div class="kit-flex m-t-l kit-flex-middle">
+            <label class="kit-width-25">アイコン画像</label>
+            <input type="text" class="textbox kit-width-75" placeholder="icon" id="icon">
+        </div>
+
+        <blockquote class="kit-sub">・define.jsonと同一のパス／<code>none</code>でアイコン画像なし</blockquote>
+
+        <div class="kit-flex m-t-l kit-flex-middle">
+            <label class="kit-width-25">幅</label>
+            <input type="text" class="textbox kit-width-75" placeholder="size.width" id="width">
+        </div>
+
+        <div class="kit-flex m-t-l kit-flex-middle">
+            <label class="kit-width-25">高さ</label>
+            <input type="text" class="textbox kit-width-75" placeholder="size.height" id="height">
+        </div>
+
+        <blockquote class="kit-sub">・デフォルトは<code>auto</code></blockquote>
 
         <h2>アプリ情報</h2>
-        <label class="kit-left">ビュー</label>
-        <input type="text" class="textbox" placeholder="view" id="view">
-        <br>
-        <label class="kit-left">スクリプト</label>
-        <input type="text" class="textbox" placeholder="script" id="script">
-        <div class="kit-sub">・<code>none</code>でスクリプトなし</div>
-        <br>
-        <label class="kit-left">CSS</label>
-        <input type="text" class="textbox" placeholder="css" id="css">
-        <div class="kit-sub">・<code>none</code>でCSSなし</div>
-    </div>
+
+        <div class="kit-flex m-t-l kit-flex-middle">
+            <label class="kit-width-25">ビュー</label>
+            <input type="text" class="textbox kit-width-75" placeholder="view" id="view">
+        </div>
+
+        <div class="kit-flex m-t-l kit-flex-middle">
+            <label class="kit-width-25">スクリプト</label>
+            <input type="text" class="textbox kit-width-75" placeholder="script" id="script">
+        </div>
+
+        <blockquote class="kit-sub">・<code>none</code>でスクリプトなし</blockquote>
+
+        <div class="kit-flex m-t-l kit-flex-middle">
+            <label class="kit-width-25">CSS</label>
+            <input type="text" class="textbox kit-width-75" placeholder="css" id="css">
+        </div>
+
+        <blockquote class="kit-sub">・<code>none</code>でCSSなし</blockquote>
+    </main>
+
+    <footer class="kit-sub p-l kit-text-c">
+        defgen for kit | <a class="kit-hl-alt" href="https://github.com/mtsgi/defgen">mtsgi/defgen</a>
+    </footer>
 </body>
+
 </html>
