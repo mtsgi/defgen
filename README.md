@@ -1,5 +1,13 @@
+# defgen
+
+### v2
+
+define.json generator for kit Apps.
+
 ### ![defgen](logo.png)
 
-Generate define.json for kit Apps
+> **This app is built with [kaf.js](https://github.com/mtsgi/kafjs)**
 
-> https://mtsgi.github.io/defgen/
+### Try it!
+
+- **https://mtsgi.github.io/defgen/**
